@@ -1,5 +1,13 @@
 
-//Created a Trie from scratch in order to prep for an interview. It fails if there are special characters
+//Created a Trie from scratch in order to prep for an interview. It fails if there are special characters.
+//Insertion and search time is O(word.length * 27) because it has to check the arrays.
+//Space is O(27 * the longest word), since again we are using arrays. O(longest word) can be achieved 
+//with maps, though maybe another helper function would be needed to check that only letters are inserted.
+//It will fail if we use special characters because 1. They don't make actual words and 2.
+//It's only designed to take the alphabet + the terminating character. The arrays present
+//a big problem but offer the constraint of only using characters of the alphabet.
+
+
 public class TriePractice {
 	public final static int ALPHABET_SIZE = 27;
 	
@@ -106,10 +114,7 @@ public class TriePractice {
 		
 	}
 }
-//Insertion and search time is O(word.length * 27) because it has to check the arrays.
-//Space is O(27 * the longest word), since again we are using arrays.
-//It will fail if we use special characters because 1. They don't make actual words and 2.
-//It's only designed to take the alphabet + the terminating character.
+
 	
 	
 	
